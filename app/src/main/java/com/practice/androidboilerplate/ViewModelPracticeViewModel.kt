@@ -9,6 +9,9 @@ class ViewModelPracticeViewModel(total: Int) : ViewModel() {
     //  var count=MutableLiveData<Int>()
 
     private var count = MutableLiveData<Int>()
+    var value=MutableLiveData<String>()
+    var input=MutableLiveData<String>()
+
     val countvalue: LiveData<Int>
         get() = count
 
@@ -25,7 +28,12 @@ class ViewModelPracticeViewModel(total: Int) : ViewModel() {
 //        count+=value;
 //        return count;
 //    }
-    fun setUpdate(value: Int) {
-        count.value = count.value?.plus(value)
+//    fun setUpdate(value: Int) {
+//        count.value = count.value?.plus(value)
+//    }
+    fun setUpdate() {
+        var input: Int =input.value!!.toInt()
+        count.value = count.value?.plus(input)
     }
+
 }

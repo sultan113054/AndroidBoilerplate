@@ -17,19 +17,22 @@ class ViewModelPractice : AppCompatActivity() {
         viewModelFactory = ViewmodelPracticeViewModelFactory(125)
         viewModel =
             ViewModelProvider(this, viewModelFactory).get(ViewModelPracticeViewModel::class.java)
-        viewModel.countvalue.observe(this, Observer {
-            binding.textView.text = it.toString()
-        }
-        )
-        binding.apply {
-            // textView.text=viewModel.getCurrentcount().toString()
-            button3.setOnClickListener {
-              //  textView.text=viewModel.getUpdatedcount(textInputEditText.text.toString().toInt()).toString()
 
-                viewModel.setUpdate(textInputEditText.text.toString().toInt())
-            }
-
-        }
+        binding.lifecycleOwner = this
+        binding.viewmodel = viewModel
+//        viewModel.countvalue.observe(this, Observer {
+//            binding.textView.text = it.toString()
+//        }
+//        )
+//        binding.apply {
+//            // textView.text=viewModel.getCurrentcount().toString()
+//            button3.setOnClickListener {
+//              //  textView.text=viewModel.getUpdatedcount(textInputEditText.text.toString().toInt()).toString()
+//
+//                viewModel.setUpdate(textInputEditText.text.toString().toInt())
+//            }
+//
+//        }
 
     }
 }
