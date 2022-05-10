@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBoilerplate">
         <activity
-            android:name=".ViewModelPractice"
+            android:name=".CoroutinePractice"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
