@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+
 }
 
 android {
@@ -32,10 +34,15 @@ android {
     buildFeatures{
         dataBinding=true
     }
+    namespace 'com.practice.androidboilerplate'
 }
 
 dependencies {
     def lifecycle_version = "2.4.1"
+    def nav_version = "2.4.2"
+
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // ViewModel utilities for Compose
