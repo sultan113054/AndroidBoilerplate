@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14322916666666666" />
         <entry key="app/src/main/res/layout/coroutine_practice.xml" value="0.11757161179991449" />
         <entry key="app/src/main/res/layout/databinding_example.xml" value="0.29791666666666666" />
@@ -10,7 +11,9 @@
         <entry key="app/src/main/res/layout/databindingexapletest2.xml" value="0.16203703703703703" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24454895254382214" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.182129115006413" />
+        <entry key="app/src/main/res/layout/item.xml" value="0.11671654553227875" />
         <entry key="app/src/main/res/layout/naviagtion_graph.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/recyclerview_layout.xml" value="0.11628901239846089" />
         <entry key="app/src/main/res/layout/viemodel_practice.xml" value="0.1" />
       </map>
     </option>
