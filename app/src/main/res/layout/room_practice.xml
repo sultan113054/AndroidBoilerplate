@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="subscriberViewModel"
+        type="com.practice.androidboilerplate.room.SubscriberViewModel" />
+</data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_name"
+            android:layout_width="275dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_input_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={subscriberViewModel.name}"
+                android:hint="name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_email"
+            android:layout_width="274dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={subscriberViewModel.email}"
+                android:hint="email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="136dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="40dp"
+            android:onClick="@{()->subscriberViewModel.saveOrUpdate()}"
+            android:text="@={subscriberViewModel.saveOrUpdateButtontext}"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_email" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="136dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:onClick="@{()->subscriberViewModel.clearAllOrDelete()}"
+            android:text="@={subscriberViewModel.clearAllOrDeleteButtonText}"
+            app:layout_constraintEnd_toEndOf="@+id/text_input_email"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_email" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

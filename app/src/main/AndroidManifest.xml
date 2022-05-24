@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBoilerplate">
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name=".room.RoomMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
