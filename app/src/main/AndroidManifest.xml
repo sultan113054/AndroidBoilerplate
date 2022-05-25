@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBoilerplate">
         <activity
-            android:name=".retrofit.RetrofitActivity"
+            android:name=".worker.WorkerManagerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
